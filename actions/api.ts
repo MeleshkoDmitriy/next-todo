@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://0ab1515caf0c156d.mokky.dev/'

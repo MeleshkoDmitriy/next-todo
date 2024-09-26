@@ -1,0 +1,19 @@
+@import '../../app/vars.scss';
+
+.wrapper {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.1s;
+  padding-inline: 20px;
+  border: 1px solid $color-gray;
+
+
+  &:hover {
+    color: blue;
+    cursor: pointer;
+    background-color: #fff;
+  }
+}

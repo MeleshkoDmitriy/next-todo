@@ -1,0 +1,43 @@
+@import './vars.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.1s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lucide:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+    padding-inline: 10px;
+  }
+}
+@media (max-width: 620px) {
+  .container {
+    max-width: 300px;
+  }
+}

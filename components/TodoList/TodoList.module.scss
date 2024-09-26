@@ -1,0 +1,20 @@
+@import '../../app/vars.scss';
+
+.wrapper {
+  max-width: 320px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid $color-gray;
+  background-color: $color-gray;
+
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
