@@ -17,8 +17,8 @@ export default async function TodoList() {
       <h2 className={styles.title}>Todos</h2>
       <div className={styles.list}>
         {todos.map((todo: TTodo) => (
-          <Link href={`/tasks/${todo.id}`}>
-            <TodoItem {...todo} key={todo.id} />
+          <Link href={`/tasks/${todo.id}`} key={todo.id}>
+            <TodoItem {...todo} />
           </Link>
         ))}
       </div>
