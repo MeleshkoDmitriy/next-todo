@@ -2,7 +2,6 @@ import { BASE_URL } from "@/actions/api";
 import styles from "./TodoList.module.scss";
 import TodoItem from "../TodoItem/TodoItem";
 import { TTodo } from "@/types/types";
-import Link from "next/link";
 import { Suspense } from "react";
 
 export default async function TodoList() {
@@ -19,9 +18,7 @@ export default async function TodoList() {
       <div className={styles.list}>
         <Suspense fallback={<div>Loading...</div>}>
           {todos.map((todo: TTodo) => (
-            <Link href={`/tasks/${todo.id}`} key={todo.id}>
               <TodoItem {...todo} />
-            </Link>
           ))}
         </Suspense>
       </div>
