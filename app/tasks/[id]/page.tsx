@@ -16,7 +16,7 @@ export default async function TaskPage({ params }: TaskPageProps) {
   const todo = await res.json();
 
   if (!todo) {
-    return <div>Task not found</div>;
+    return <div>Task not found!</div>;
   }
 
   return (
