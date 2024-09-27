@@ -3,6 +3,7 @@ import styles from "./TodoList.module.scss";
 import TodoItem from "../TodoItem/TodoItem";
 import { TTodo } from "@/types/types";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default async function TodoList() {
   const res = await fetch(`${BASE_URL}/todos`, {
@@ -16,11 +17,13 @@ export default async function TodoList() {
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Todos</h2>
       <div className={styles.list}>
-        {todos.map((todo: TTodo) => (
-          <Link href={`/tasks/${todo.id}`} key={todo.id}>
-            <TodoItem {...todo} />
-          </Link>
-        ))}
+        <Suspense fallback={<div>Loading...</div>}>
+          {todos.map((todo: TTodo) => (
+            <Link href={`/tasks/${todo.id}`} key={todo.id}>
+              <TodoItem {...todo} />
+            </Link>
+          ))}
+        </Suspense>
       </div>
     </section>
   );
