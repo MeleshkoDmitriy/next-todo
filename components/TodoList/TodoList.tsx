@@ -18,7 +18,7 @@ export default async function TodoList() {
       <div className={styles.list}>
         <Suspense fallback={<div>Loading...</div>}>
           {todos.map((todo: TTodo) => (
-              <TodoItem {...todo} />
+              <TodoItem {...todo} key={todo.id}/>
           ))}
         </Suspense>
       </div>
